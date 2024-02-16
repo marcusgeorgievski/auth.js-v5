@@ -39,7 +39,6 @@ export default function RegisterForm() {
         setError("")
 
         startTransition(async () => {
-            await new Promise((r) => setTimeout(r, 2000))
             register(values).then((res) => {
                 setError(res.error)
                 setSuccess(res.success)
